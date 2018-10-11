@@ -30,12 +30,15 @@ class App extends React.Component {
 
     return (
       <div>
-        <input vlaue={this.state.search} onChange={this.onsearchinput} />
+        <div className="img">
+        <h2>Search Emojis</h2>
+        </div>
+        <input vlaue={this.state.search} onChange={this.onsearchinput} placeholder="Search"/>
         <ul>
           {filtermethod.slice(0, 20).map(function(data, index) {
             return (
-              <div key={index}>
-                <span>{data.title}</span>
+              <div className="div1" key={index}>
+                <span >{data.title}</span>
                 <span>{data.symbol}</span>
               </div>
             );
